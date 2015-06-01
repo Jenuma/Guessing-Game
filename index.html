@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Metadata -->
+        <title>Guess_Roberts</title>
+        <meta name="author" content="Clifton Roberts">
+        <meta charset="UTF-8">
+        
+        <!-- jQuery -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        
+        <!-- JavaScript -->
+        <script src="guess_roberts.js"></script>
+    </head>
+    
+    <body>
+        <!-- Title and Game Instructions -->
+        <div id="header" align="center">
+            <img src="img/swirl_left.png" class="image"/>
+            <h1>Guessing Game</h1>
+            <img src="img/swirl_right.png" class="image"/>
+            <p>
+                Welcome to the guessing game. We will generate a number for you
+                between 1 and 100. As soon as you hit the "play" button, you
+                will have 10 seconds to make a guess. Guess correctly to win.
+                If you guess incorrectly, we will tell you if your guess was
+                too high or too low and you will lose a life. You only have
+                7 lives. If you wait too long, you will lose a life. If you
+                lose all your lives, it's game over.
+            </p>
+            <p>
+                You can exit the game at any time by clicking on the Exit Game
+                button. Exiting the game will close this tab in your browser.
+                You can also restart the game at any time by clicking on the
+                Restart Game button.
+            </p>
+            <!-- Play Game Button -->
+            <button id="btnPlayGame" onclick="playGame()">
+                <strong>
+                    Play Game
+                </strong>
+            </button>
+        </div>
+        <!-- Game Controls and Interface -->
+        <div id="game" class="hidden" align="center">
+            <!-- Player Information -->
+            <div id="playerInfo">
+                Lives Remaining:
+                <span id="lives">
+                    7
+                </span>
+                <br />
+                Time Remaining:
+                <span id="time">
+                    10
+                </span>
+                <br />
+                Guesses Made:
+                <span id="guesses">
+                    No guesses yet.
+                </span>
+            </div>
+            <!-- Guess Input Box -->
+            <input
+                   type="text"
+                   id="txtGuess"
+                   placeholder="Enter your guess here."
+            >
+            <!-- Submit Guess Button -->
+            <button id="btnSubmitGuess" onclick="submitGuess()">
+                <strong>
+                    Submit Guess
+                </strong>                
+            </button>                            
+            <br />
+            <!-- Restart Game Button -->
+            <button id="btnRestartGame" onclick="restartGame()">
+                <strong>
+                    Restart Game
+                </strong>                
+            </button>
+            <!-- Exit Game Button -->
+            <button id="btnExitGame" onclick="exitGame()">
+                <strong>
+                    Exit Game
+                </strong>                
+            </button>
+            <br />
+            <!-- Error Message -->
+            <strong id="error">
+                Your guess is not a number between 1 and 100!
+            </strong>
+        </div>
+    </body>
+</html>

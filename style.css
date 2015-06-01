@@ -1,0 +1,66 @@
+/* Declare an imported font. */
+@font-face
+{
+    font-family: SegoeUILight;
+    src: url(segoeuil_1.ttf);
+}
+
+/* Apply the font to the page. */
+html, body, button, input
+{
+    font-family: SegoeUILight;
+}
+
+/* Hides certain elements on page load. */
+.hidden
+{
+    display: none;
+}
+
+.image
+{
+    margin-top: 50px;
+    height: 100px;
+}
+
+h1
+{
+    display: inline-block;
+    padding: 0px 5px 5px 5px;
+    margin-bottom: -5px;
+}
+
+/* Make all the buttons the same width. */
+button
+{
+    width: 120px;
+}
+
+#playerInfo
+{
+    padding: 5px;
+    margin: 10px;
+    width: 250px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#txtGuess
+{
+    margin-left: 10px;
+}
+
+#btnRestartGame
+{
+    margin-left: 10px;
+}
+
+#btnRestartGame, #btnExitGame
+{
+    margin-top: 5px;
+}
+
+#error
+{
+    color: red;
+}
